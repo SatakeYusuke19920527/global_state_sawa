@@ -1,9 +1,11 @@
 import { GET_DATA } from '../actions/index'
 
 const reducer = (state, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case GET_DATA:
-    return { ...state, user_data: action.data }
+      const result = action.data.filter(user => user.id <= 5);
+      console.log(result);
+    return { ...state, user_data:result }
       default:
         return state
     }
