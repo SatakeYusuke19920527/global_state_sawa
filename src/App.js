@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import TopPage from './pages/TopPage'
+import SecondPage from './pages/SecondPage'
 import Header from './components/Header'
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
       <Header />
         <Switch>
         <Route exact path='/' component={TopPage} />
-        </Switch>
+      <Route exact path='/secondpage' component={SecondPage} />  
+      </Switch>
     </Router>
   );
 }

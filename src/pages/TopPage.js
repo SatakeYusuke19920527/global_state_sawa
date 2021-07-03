@@ -3,6 +3,8 @@ import {fetchGetData} from '../apis/index'
 import { Store } from '../store/index'
 import { GET_DATA } from '../actions/index'
 import Card from '../components/Card'
+import { Route, Switch } from 'react-router-dom'
+import SecondPage from './SecondPage'
 
 const TopPage = () => {
   const { globalState, setGlobalState } = useContext(Store)
@@ -15,7 +17,8 @@ const TopPage = () => {
     })
   },[])
   console.log(globalState)
-  
+
+
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
       {
